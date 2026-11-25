@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FlexControl | Grupo 27</title>
+    <meta name="description" content="FlexControl, logística y distribución. Identificación del paquete. Grupo 27, IFTS 29.">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="encabezado">
+      <a class="encabezado__marca" href="#presentacion">
+        <!-- Incorporar el logo original en assets/images/logo-flexcontrol.svg -->
+        <span class="logo-reserva logo-reserva--chico" role="img" aria-label="Espacio reservado para el logo original de FlexControl"></span>
+        <span>FlexControl</span>
+      </a>
+      <nav class="navegacion" aria-label="Secciones de la página">
+        <a href="#presentacion">Presentación</a>
+        <a href="#r1">R1</a>
+        <a href="#r2">R2</a>
+        <a href="#grupo">Grupo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="presentacion" id="presentacion" aria-labelledby="titulo-flexcontrol">
+        <div class="presentacion__grilla">
+          <!-- Incorporar el logo original en assets/images/logo-flexcontrol.svg -->
+          <div class="logo-reserva logo-reserva--grande" role="img" aria-label="Espacio reservado para el logo original de FlexControl"></div>
+
+          <div class="presentacion__identidad">
+            <p class="presentacion__rubro">Logística y distribución</p>
+            <h1 id="titulo-flexcontrol">FlexControl</h1>
+            <p class="presentacion__servicio">
+              <span class="etiqueta">Servicio</span>
+              Control de paquetes y coordinación de retiros
+            </p>
+            <p class="presentacion__descripcion">
+              Control de paquetes y coordinación de retiros mediante lectura de etiquetas y avisos al transportista.
+            </p>
+          </div>
+
+          <aside class="ficha-grupo" aria-label="Identificación del grupo y del bloque">
+            <p class="ficha-grupo__grupo">Grupo 27</p>
+            <p class="ficha-grupo__bloque">Bloque: Identificación del paquete</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="regla" id="r1" aria-labelledby="titulo-r1">
+        <h2 id="titulo-r1">Regla R1</h2>
+
+        <div class="regla__resumen">
+          <article class="sentencia">
+            <h3>Sentencia</h3>
+            <blockquote>
+              <p>Si una etiqueta escaneada corresponde a un único pedido registrado, el sistema muestra ese pedido y el estado de preparación del paquete.</p>
+            </blockquote>
+          </article>
+
+          <article class="propuesta">
+            <h3>Propuesta de automatización</h3>
+            <div class="propuesta__contenido"></div>
+          </article>
+        </div>
+
+        <figure class="diagrama">
+          <img src="assets/diagrams/flujo-r1.svg" alt="Espacio reservado para el diagrama de flujo de R1." width="960" height="240">
+          <figcaption>Diagrama de flujo de R1</figcaption>
+        </figure>
+
+        <div class="desplegables">
+          <h3 class="desplegables__titulo">Detalle de la automatización</h3>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-entrada" id="r1-boton-entrada">Datos de entrada</button>
+            </h4>
+            <div id="r1-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r1-boton-entrada" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-condiciones" id="r1-boton-condiciones">Condiciones</button>
+            </h4>
+            <div id="r1-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-condiciones" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-acciones" id="r1-boton-acciones">Acciones</button>
+            </h4>
+            <div id="r1-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-acciones" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-herramientas" id="r1-boton-herramientas">Herramientas consultadas</button>
+            </h4>
+            <div id="r1-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r1-boton-herramientas" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-resultados" id="r1-boton-resultados">Resultados</button>
+            </h4>
+            <div id="r1-panel-resultados" class="desplegable__panel" role="region" aria-labelledby="r1-boton-resultados" hidden></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="regla regla--alterna" id="r2" aria-labelledby="titulo-r2">
+        <h2 id="titulo-r2">Regla R2</h2>
+
+        <div class="regla__resumen">
+          <article class="sentencia">
+            <h3>Sentencia</h3>
+            <blockquote>
+              <p>Si la etiqueta no se reconoce o corresponde a más de un registro, el sistema solicita revisión humana y no modifica el estado de ningún pedido.</p>
+            </blockquote>
+          </article>
+
+          <article class="propuesta">
+            <h3>Propuesta de automatización</h3>
+            <div class="propuesta__contenido"></div>
+          </article>
+        </div>
+
+        <figure class="diagrama">
+          <img src="assets/diagrams/flujo-r2.svg" alt="Espacio reservado para el diagrama de flujo de R2." width="960" height="240">
+          <figcaption>Diagrama de flujo de R2</figcaption>
+        </figure>
+
+        <div class="desplegables">
+          <h3 class="desplegables__titulo">Detalle de la automatización</h3>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-entrada" id="r2-boton-entrada">Datos de entrada</button>
+            </h4>
+            <div id="r2-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r2-boton-entrada" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-condiciones" id="r2-boton-condiciones">Condiciones</button>
+            </h4>
+            <div id="r2-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-condiciones" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-acciones" id="r2-boton-acciones">Acciones</button>
+            </h4>
+            <div id="r2-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-acciones" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-herramientas" id="r2-boton-herramientas">Herramientas consultadas</button>
+            </h4>
+            <div id="r2-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r2-boton-herramientas" hidden></div>
+          </div>
+
+          <div class="desplegable">
+            <h4>
+              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-resultados" id="r2-boton-resultados">Resultados</button>
+            </h4>
+            <div id="r2-panel-resultados" class="desplegable__panel" role="region" aria-labelledby="r2-boton-resultados" hidden></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie" id="grupo">
+      <p>Trabajo realizado por el Grupo 27.</p>
+      <p>Bloque: Identificación del paquete.</p>
+      <p>IFTS 29.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
