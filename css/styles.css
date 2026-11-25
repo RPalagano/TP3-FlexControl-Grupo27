@@ -77,22 +77,21 @@ main {
   margin: 0 auto;
 }
 
-.logo-reserva {
+.logo {
   display: block;
-  border: 2px dashed var(--linea);
-  background: var(--superficie);
+  object-fit: contain;
 }
 
-.logo-reserva--chico {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-color: rgba(255, 255, 255, 0.55);
-  background: transparent;
+.logo--chico {
+  width: 3.25rem;
+  height: 3.25rem;
+  background: #ffffff;
+  border-radius: 0.35rem;
 }
 
-.logo-reserva--grande {
-  width: 10rem;
-  height: 10rem;
+.logo--grande {
+  width: 16rem;
+  height: auto;
 }
 
 .presentacion {
