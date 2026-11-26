@@ -460,7 +460,9 @@ blockquote p {
 }
 
 .desplegable__panel {
-  padding: 0 1.15rem 1.1rem;
+  padding: 1rem 1.15rem 1.1rem;
+  border-top: 1px solid var(--linea);
+  background: #fbfdfd;
   color: var(--texto-suave);
 }
 
@@ -697,6 +699,10 @@ blockquote p {
   .sentencia,
   .propuesta {
     padding: 1.1rem;
+  }
+
+  .desplegable__panel {
+    padding: 0.85rem 1rem 1rem;
   }
 
   .diagrama {
