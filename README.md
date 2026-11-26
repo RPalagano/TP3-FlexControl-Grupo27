@@ -1,131 +1,89 @@
-# FlexControl – Grupo 27
+# FlexControl — Grupo 27
 
-## 1. Información del proyecto
+## Información del trabajo
 
-**Institución:** IFTS 29  
-**Trabajo práctico:** TP3 – Construcción 100% agéntica  
-**Grupo:** 27  
-**Startup asignada:** FlexControl  
-**Institución de origen de la startup:** IFTS   
-**Bloque asignado:** Identificación del paquete  
+- **Institución del grupo:** IFTS 29
+- **Trabajo práctico:** TP3 — Construcción 100% agéntica
+- **Startup destinataria:** FlexControl, startup de logística y distribución
+- **Bloque asignado:** Identificación del paquete
+- **Entrega:** 26/11/2026
 
-## 2. Integrantes del grupo
+La landing presenta la startup, las dos sentencias asignadas, una propuesta por sentencia, sus diagramas y los detalles de cada recorrido. Las propuestas describen agentes futuros: no implementan automatizaciones reales ni se conectan a servicios externos.
 
-| Integrante | Aporte al proyecto |
+## Grupo e integrantes
+
+| Integrante | Aporte concreto |
 |---|---|
 | Rocío Camila Palagano | Coordinación, organización y desarrollo de las propuestas. |
-| [Nombre y apellido 2] | Análisis de las sentencias y revisión de la lógica de los diagramas. |
-| [Nombre y apellido 3] | Revisión del diseño, contenido y funcionamiento de la landing. |
-| [Nombre y apellido 4] | Documentación, pruebas y publicación del proyecto. |
+| Candela Daubler | Análisis de las sentencias y revisión de la lógica de los diagramas. |
+| Dante Pufahl | Revisión del diseño, contenido y funcionamiento de la landing. |
+| David Ramon Thomen | Documentación, pruebas y publicación del proyecto. |
 
-*Los aportes deberán ajustarse a las tareas efectivamente realizadas por cada integrante.*
+## Identidad opcional del Grupo 27
 
-## 3. Startup asignada
+El grupo se presenta como equipo que diseña propuestas agénticas para procesos de logística y distribución, con una identidad gráfica propia.
 
-**Nombre:** FlexControl  
-**Rubro:** Logística y distribución.
+## Startup y servicio
 
-**Objetivo:** Control de paquetes y coordinación de retiros mediante lectura de etiquetas y avisos al transportista.
+**FlexControl** ofrece control de paquetes y coordinación de retiros mediante lectura de etiquetas y avisos al transportista. La propuesta aborda la identificación del pedido correcto y la detección de inconsistencias en sus registros.
 
-FlexControl busca facilitar la identificación de paquetes y la consulta de pedidos mediante el escaneo de etiquetas, permitiendo conocer el estado de preparación y detectar posibles inconsistencias en los registros.
+El logo de FlexControl incluido en la landing es el recurso recibido para la startup. Se distingue de la identidad del Grupo 27.
 
-## 4. Sentencias asignadas
+## Sentencias, análisis y propuestas
 
-### R1 – Fase 1
+Se conserva la redacción de las dos sentencias asignadas.
 
-**Sentencia original:**
+### R1 — Identificación de un pedido
 
-"Si una etiqueta escaneada corresponde a un único pedido registrado, el sistema muestra ese pedido y el estado de preparación del paquete."
+**Sentencia original:** “Si una etiqueta escaneada corresponde a un único pedido registrado, el sistema muestra ese pedido y el estado de preparación del paquete.”
 
-**Interpretación:**
+**Ficha:** Datos necesarios: código escaneado, pedidos registrados y estado de preparación. **Condición:** la etiqueta corresponde a exactamente un pedido. **Consecuencia:** mostrar ese pedido y el estado del paquete.
 
-El sistema recibe una etiqueta escaneada y consulta los pedidos registrados. Cuando encuentra una única coincidencia, muestra la información del pedido y su estado de preparación.
+**Propuesta — Consulta del pedido por etiqueta.** Un futuro agente consultaría el registro con el código escaneado y mostraría el pedido y su estado si encuentra una coincidencia única. Esto agilizaría las consultas; para ese caso no requiere aprobación humana.
 
-### R2 – Fase 2
+**Caso no definido por R1:** si hay cero o varias coincidencias, la sentencia no indica una acción. El grupo propone pedir revisión humana y no cambiar estados; es una decisión de diseño, no una consecuencia lógica de R1.
 
-**Sentencia original:**
+### R2 — Revisión de etiquetas problemáticas
 
-"Si la etiqueta no se reconoce o corresponde a más de un registro, el sistema solicita revisión humana y no modifica el estado de ningún pedido."
+**Sentencia original:** “Si la etiqueta no se reconoce o corresponde a más de un registro, el sistema solicita revisión humana y no modifica el estado de ningún pedido.”
 
-**Interpretación:**
+**Ficha:** Datos necesarios: código escaneado y registros para determinar reconocimiento y cantidad de coincidencias. **Condición:** la etiqueta no se reconoce **o** corresponde a más de un registro. **Consecuencia:** solicitar revisión humana y no modificar el estado de ningún pedido.
 
-El sistema detecta etiquetas que no tienen coincidencias o que presentan más de un registro asociado. En esos casos solicita la intervención de una persona y evita modificar el estado de los pedidos.
+**Propuesta — Detección segura de inconsistencias.** Un futuro agente comprobaría el código contra los registros y pediría intervención humana cuando no lo reconozca o encuentre varias coincidencias. Esto permite revisar los casos problemáticos sin alterar estados.
 
-## 5. Propuestas de automatización
+**Caso no definido por R2:** cuando la condición no se cumple, la sentencia no establece una acción. El grupo propone finalizar sin accionar ni modificar estados; esta decisión se mantiene dentro del flujo R2 y no lo conecta con R1.
 
-### Propuesta 1: Identificación automática de pedidos
+En ambas propuestas se describe la consulta de una base de datos o registro de pedidos; no se implementa ni se conecta ninguna herramienta real. Los recorridos y casos de prueba están representados también en la landing.
 
-Se propone un agente que reciba el código de una etiqueta escaneada y consulte la base de datos de pedidos.
+## Cómo probar la página
 
-Si encuentra exactamente un pedido asociado, mostrará sus datos y el estado de preparación del paquete.
+1. Abrir `index.html` en una computadora y comprobar que el logo se vea completo.
+2. Abrir y cerrar los desplegables con clic y con teclado (Tab y Enter o Espacio).
+3. Para R1, probar una etiqueta con una coincidencia y otra con cero o varias.
+4. Para R2, probar una etiqueta no reconocida, una con varias coincidencias y una que no active la condición.
+5. Confirmar que la intervención humana y la regla de no cambiar estados aparezcan en el caso definido por R2.
 
-**Herramienta consultada:** Base de datos de pedidos.
+Los casos son ejemplos de recorrido; la página no consulta datos reales ni ejecuta las propuestas.
 
-**Resultado esperado:** Identificación del pedido y visualización de su estado.
+## Tecnologías
 
-### Propuesta 2: Detección de etiquetas problemáticas
+- HTML, CSS y JavaScript para la landing y los desplegables accesibles.
+- SVG para los diagramas.
+- Git y GitHub para control de versiones y alojamiento del repositorio.
 
-Se propone un agente que analice las etiquetas escaneadas y detecte aquellas que no se reconocen o que corresponden a más de un registro.
+## Herramientas de inteligencia artificial
 
-Ante estas situaciones, solicitará una revisión humana y evitará cualquier modificación del estado de los pedidos.
+| Aplicación / entorno | Modelo | Uso y cambios solicitados |
+|---|---|---|
+| Cursor | Modelo no informado | Asistencia en la estructura, el contenido y la revisión de la landing. |
+| Antigravity | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
+| Codex | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
+| OpenCode | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
+| VS Code con asistente de programación Copilot SDK | Modelo no informado | Completar el contenido pendiente de la landing, representar los dos recorridos con sus alternativas, poblar los detalles desplegables, diseñar la identidad gráfica opcional del Grupo 27 y alinear este README con la consigna. |
 
-**Herramienta consultada:** Base de datos de pedidos.
+Los modelos se registran como **“modelo no informado”** porque no se dispone de sus nombres confirmados. El grupo indicó las aplicaciones anteriores; debe verificar el uso efectivo de cada una y agregar cualquier cambio solicitado que falte.
 
-**Intervención humana:** Revisión de las etiquetas problemáticas.
+## Enlaces
 
-**Resultado esperado:** Detección de inconsistencias y prevención de modificaciones incorrectas.
-
-## 6. Tecnologías utilizadas
-
-- HTML: estructura de la página.
-- CSS: diseño y estilos visuales.
-- JavaScript: interacciones y desplegables.
-- SVG: representación gráfica de los diagramas de flujo.
-- Git y GitHub: control de versiones y alojamiento del repositorio.
-
-## 7. Herramientas de inteligencia artificial
-
-### Aplicación utilizada
-
-**Cursor:** entorno de desarrollo utilizado para construir y modificar los archivos del proyecto mediante instrucciones en lenguaje natural.
-
-### Modelo utilizado
-
-**Grok 4.7:** modelo que figura seleccionado en Cursor durante el inicio del trabajo. Se deberá verificar y registrar si se mantiene durante todo el desarrollo.
-
-### Uso de la inteligencia artificial
-
-Se utiliza el agente de programación para:
-
-- Proponer la estructura inicial de archivos.
-- Organizar las secciones de la landing.
-- Generar los archivos HTML, CSS y JavaScript.
-- Construir los diagramas de flujo.
-- Incorporar los desplegables interactivos.
-- Realizar ajustes visuales y correcciones a partir de las revisiones del grupo.
-
-### Instrucciones y modificaciones solicitadas
-
-Durante el desarrollo se solicitaron, entre otras, las siguientes tareas:
-
-1. Proponer una estructura inicial para el proyecto.
-2. Adaptar la estructura a los requisitos específicos del TP3.
-3. Organizar visualmente las dos propuestas de automatización.
-4. Preparar los diagramas de flujo correspondientes a R1 y R2.
-5. Respetar las sentencias originales y utilizar el logo original de FlexControl.
-
-*Se completará este registro con las instrucciones y modificaciones efectivamente realizadas.*
-
-## 8. Enlaces del proyecto
-
-**Repositorio GitHub:** [Pendiente de publicación]
-
-**Landing publicada:** [Pendiente de publicación]
-
-## 9. Alcance del proyecto
-
-El proyecto consiste en una propuesta visual y explicativa de dos soluciones de automatización para FlexControl.
-
-La landing permite comprender el funcionamiento de cada propuesta mediante sentencias originales, explicaciones y diagramas de flujo.
-
-No se implementan agentes reales, conexiones a APIs, backend ni automatizaciones funcionales. La inteligencia artificial se utiliza exclusivamente como herramienta para la construcción de la página web.
+- **Repositorio:** [RPalagano/TP3-FlexControl-Grupo27](https://github.com/RPalagano/TP3-FlexControl-Grupo27)
+- **Landing publicada:** pendiente de publicación; agregar aquí la URL final y comprobarla en una ventana sin sesión.

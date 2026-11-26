@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 870" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Comparación de los recorridos R1 y R2</title>
+  <desc id="descripcion">Dos columnas muestran recorridos independientes. R1 comprueba si hay exactamente un pedido asociado: sí, muestra pedido y estado; no, propone revisión humana. R2 comprueba si la etiqueta no se reconoce o tiene más de un registro: sí, solicita revisión humana sin cambiar estados; no, propone finalizar sin acción.</desc>
+  <defs>
+    <marker id="flecha-r1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c5682"/>
+    </marker>
+    <marker id="flecha-r2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0c8b83"/>
+    </marker>
+    <style>
+      .titulo { font: 700 25px "Segoe UI", sans-serif; text-anchor: middle; }
+      .texto { font: 19px "Segoe UI", sans-serif; fill: #1d2b3a; text-anchor: middle; }
+      .rama { font: 700 17px "Segoe UI", sans-serif; }
+      .nota { font: 15px "Segoe UI", sans-serif; fill: #506477; text-anchor: middle; }
+      .paso { fill: #fff; stroke-width: 3; rx: 12; }
+      .fin { stroke-width: 3; rx: 24; }
+      .linea-r1 { fill: none; stroke: #1c5682; stroke-width: 3; marker-end: url(#flecha-r1); }
+      .linea-r2 { fill: none; stroke: #0c8b83; stroke-width: 3; marker-end: url(#flecha-r2); }
+    </style>
+  </defs>
+  <rect width="1440" height="870" fill="#f4f7fb"/>
+
+  <rect x="24" y="24" width="680" height="822" rx="20" fill="#fff" stroke="#c8d9e8" stroke-width="2"/>
+  <rect x="24" y="24" width="680" height="66" rx="20" fill="#eaf2f8"/>
+  <path d="M24 70 V90 H704 V70" fill="#eaf2f8"/>
+  <rect x="24" y="24" width="8" height="66" rx="4" fill="#1c5682"/>
+  <text class="titulo" x="364" y="66" fill="#123d60">R1 · Identificación de un pedido</text>
+
+  <rect class="fin" x="274" y="108" width="180" height="50" fill="#eaf2f8" stroke="#1c5682"/>
+  <text class="titulo" x="364" y="141" fill="#123d60">INICIO</text>
+  <path class="linea-r1" d="M364 158 V176"/>
+  <rect class="paso" x="89" y="184" width="550" height="66" stroke="#1c5682"/>
+  <text class="texto" x="364" y="225">Recibir la etiqueta escaneada</text>
+  <path class="linea-r1" d="M364 250 V268"/>
+  <rect class="paso" x="89" y="276" width="550" height="66" stroke="#1c5682"/>
+  <text class="texto" x="364" y="317">Consultar pedidos por código de etiqueta</text>
+  <path class="linea-r1" d="M364 342 V362"/>
+  <polygon points="364,362 650,448 364,534 78,448" fill="#f1f6fa" stroke="#1c5682" stroke-width="3"/>
+  <text class="texto" x="364" y="441">
+    <tspan x="364">¿Corresponde a exactamente</tspan>
+    <tspan x="364" dy="26">un pedido registrado?</tspan>
+  </text>
+
+  <path class="linea-r1" d="M78 448 L176 565"/>
+  <text class="rama" x="94" y="507" fill="#1c5682">SÍ</text>
+  <path class="linea-r1" d="M650 448 L552 565"/>
+  <text class="rama" x="605" y="507" fill="#1c5682">NO</text>
+  <rect class="paso" x="44" y="574" width="300" height="106" stroke="#1c5682"/>
+  <text class="texto" x="194" y="616">
+    <tspan x="194">Mostrar pedido y</tspan>
+    <tspan x="194" dy="25">estado de preparación</tspan>
+  </text>
+  <rect class="paso" x="384" y="574" width="300" height="106" stroke="#1c5682"/>
+  <text class="texto" x="534" y="616">
+    <tspan x="534">Solicitar revisión</tspan>
+    <tspan x="534" dy="25">humana*</tspan>
+  </text>
+  <path class="linea-r1" d="M194 680 V712"/>
+  <path class="linea-r1" d="M534 680 V712"/>
+  <rect class="fin" x="124" y="720" width="140" height="48" fill="#eaf2f8" stroke="#1c5682"/>
+  <text class="titulo" x="194" y="752" fill="#123d60">FIN</text>
+  <rect class="fin" x="464" y="720" width="140" height="48" fill="#eaf2f8" stroke="#1c5682"/>
+  <text class="titulo" x="534" y="752" fill="#123d60">FIN</text>
+  <text class="nota" x="364" y="807">
+    <tspan x="364">*La revisión si hay cero o varias coincidencias</tspan>
+    <tspan x="364" dy="20">es una alternativa del grupo.</tspan>
+  </text>
+
+  <rect x="736" y="24" width="680" height="822" rx="20" fill="#fff" stroke="#c5e5dd" stroke-width="2"/>
+  <rect x="736" y="24" width="680" height="66" rx="20" fill="#e7f5f1"/>
+  <path d="M736 70 V90 H1416 V70" fill="#e7f5f1"/>
+  <rect x="736" y="24" width="8" height="66" rx="4" fill="#0c8b83"/>
+  <text class="titulo" x="1076" y="66" fill="#086b66">R2 · Revisión de etiquetas problemáticas</text>
+
+  <rect class="fin" x="986" y="108" width="180" height="50" fill="#e7f5f1" stroke="#0c8b83"/>
+  <text class="titulo" x="1076" y="141" fill="#086b66">INICIO</text>
+  <path class="linea-r2" d="M1076 158 V176"/>
+  <rect class="paso" x="801" y="184" width="550" height="66" stroke="#0c8b83"/>
+  <text class="texto" x="1076" y="225">Recibir la etiqueta escaneada</text>
+  <path class="linea-r2" d="M1076 250 V268"/>
+  <rect class="paso" x="801" y="276" width="550" height="66" stroke="#0c8b83"/>
+  <text class="texto" x="1076" y="317">Consultar los registros por código</text>
+  <path class="linea-r2" d="M1076 342 V362"/>
+  <polygon points="1076,362 1362,448 1076,534 790,448" fill="#eff8f5" stroke="#0c8b83" stroke-width="3"/>
+  <text class="texto" x="1076" y="438">
+    <tspan x="1076">¿No se reconoce la etiqueta</tspan>
+    <tspan x="1076" dy="26">O hay más de un registro?</tspan>
+  </text>
+
+  <path class="linea-r2" d="M790 448 L888 565"/>
+  <text class="rama" x="806" y="507" fill="#0c8b83">SÍ</text>
+  <path class="linea-r2" d="M1362 448 L1264 565"/>
+  <text class="rama" x="1317" y="507" fill="#0c8b83">NO</text>
+  <rect class="paso" x="756" y="574" width="300" height="106" stroke="#0c8b83"/>
+  <text class="texto" x="906" y="616">
+    <tspan x="906">Solicitar revisión humana</tspan>
+    <tspan x="906" dy="25">sin modificar estados</tspan>
+  </text>
+  <rect class="paso" x="1096" y="574" width="300" height="106" stroke="#0c8b83"/>
+  <text class="texto" x="1246" y="616">
+    <tspan x="1246">Finalizar sin acción*</tspan>
+    <tspan x="1246" dy="25">ni cambios de estado</tspan>
+  </text>
+  <path class="linea-r2" d="M906 680 V712"/>
+  <path class="linea-r2" d="M1246 680 V712"/>
+  <rect class="fin" x="836" y="720" width="140" height="48" fill="#e7f5f1" stroke="#0c8b83"/>
+  <text class="titulo" x="906" y="752" fill="#086b66">FIN</text>
+  <rect class="fin" x="1176" y="720" width="140" height="48" fill="#e7f5f1" stroke="#0c8b83"/>
+  <text class="titulo" x="1246" y="752" fill="#086b66">FIN</text>
+  <text class="nota" x="1076" y="807">
+    <tspan x="1076">*Si la condición no se cumple, finalizar sin acción</tspan>
+    <tspan x="1076" dy="20">es una alternativa del grupo.</tspan>
+  </text>
+</svg>

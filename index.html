@@ -4,19 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlexControl | Grupo 27</title>
-    <meta name="description" content="FlexControl, logística y distribución. Identificación del paquete. Grupo 27, IFTS 29.">
+    <meta name="description" content="Propuestas agénticas para FlexControl: identificación de paquetes y revisión de etiquetas. Grupo 27, IFTS 29.">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="encabezado">
       <a class="encabezado__marca" href="#presentacion">
         <img class="logo logo--chico" src="assets/images/icon_flexcontrol.webp" alt="" width="52" height="52">
-        <span>FlexControl</span>
+        <span class="encabezado__textos">
+          <strong>FlexControl</strong>
+          <small>Logística y distribución</small>
+        </span>
       </a>
       <nav class="navegacion" aria-label="Secciones de la página">
         <a href="#presentacion">Presentación</a>
         <a href="#r1">R1</a>
         <a href="#r2">R2</a>
+        <a href="#flujos">Diagramas</a>
         <a href="#grupo">Grupo</a>
       </nav>
     </header>
@@ -24,156 +28,155 @@
     <main>
       <section class="presentacion" id="presentacion" aria-labelledby="titulo-flexcontrol">
         <div class="presentacion__grilla">
-          <img class="logo logo--grande" src="assets/images/icon_flexcontrol.webp" alt="Logo de FlexControl" width="256" height="256">
-
+          <img class="logo logo--grande" src="assets/images/icon_flexcontrol.webp" alt="Logo original de FlexControl" width="256" height="256">
           <div class="presentacion__identidad">
-            <p class="presentacion__rubro">Logística y distribución</p>
+            <p class="presentacion__rubro">Logística y distribución · Origen: IFTS 16</p>
             <h1 id="titulo-flexcontrol">FlexControl</h1>
             <p class="presentacion__servicio">
               <span class="etiqueta">Servicio</span>
               Control de paquetes y coordinación de retiros
             </p>
             <p class="presentacion__descripcion">
-              Control de paquetes y coordinación de retiros mediante lectura de etiquetas y avisos al transportista.
+              Mediante la lectura de etiquetas y avisos al transportista, FlexControl facilita la identificación de paquetes y la consulta de pedidos. La propuesta aborda el problema de encontrar el pedido correcto y detectar inconsistencias en los registros.
             </p>
           </div>
-
           <aside class="ficha-grupo" aria-label="Identificación del grupo y del bloque">
             <p class="ficha-grupo__grupo">Grupo 27</p>
             <p class="ficha-grupo__bloque">Bloque: Identificación del paquete</p>
+            <p>IFTS 29</p>
           </aside>
         </div>
       </section>
 
       <section class="regla" id="r1" aria-labelledby="titulo-r1">
-        <h2 id="titulo-r1">Regla R1</h2>
-
+        <h2 id="titulo-r1">Regla R1 · Identificación de un pedido</h2>
         <div class="regla__resumen">
           <article class="sentencia">
-            <h3>Sentencia</h3>
+            <h3>Sentencia original</h3>
             <blockquote>
               <p>Si una etiqueta escaneada corresponde a un único pedido registrado, el sistema muestra ese pedido y el estado de preparación del paquete.</p>
             </blockquote>
           </article>
-
           <article class="propuesta">
-            <h3>Propuesta de automatización</h3>
-            <div class="propuesta__contenido"></div>
+            <h3>Propuesta · Consulta del pedido por etiqueta</h3>
+            <div class="propuesta__contenido">
+              <p>Un futuro agente consultaría los pedidos registrados usando el código escaneado y, si obtiene una única coincidencia, mostraría el pedido y su estado de preparación. Esto agilizaría la consulta y reduciría búsquedas manuales; para este caso no necesita aprobación humana.</p>
+            </div>
           </article>
-        </div>
-
-        <figure class="diagrama">
-          <img src="assets/diagrams/flujo-r1.svg" alt="Espacio reservado para el diagrama de flujo de R1." width="960" height="240">
-          <figcaption>Diagrama de flujo de R1</figcaption>
-        </figure>
-
-        <div class="desplegables">
-          <h3 class="desplegables__titulo">Detalle de la automatización</h3>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-entrada" id="r1-boton-entrada">Datos de entrada</button>
-            </h4>
-            <div id="r1-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r1-boton-entrada" hidden></div>
-          </div>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-condiciones" id="r1-boton-condiciones">Condiciones</button>
-            </h4>
-            <div id="r1-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-condiciones" hidden></div>
-          </div>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-acciones" id="r1-boton-acciones">Acciones</button>
-            </h4>
-            <div id="r1-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-acciones" hidden></div>
-          </div>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-herramientas" id="r1-boton-herramientas">Herramientas consultadas</button>
-            </h4>
-            <div id="r1-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r1-boton-herramientas" hidden></div>
-          </div>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-resultados" id="r1-boton-resultados">Resultados</button>
-            </h4>
-            <div id="r1-panel-resultados" class="desplegable__panel" role="region" aria-labelledby="r1-boton-resultados" hidden></div>
-          </div>
         </div>
       </section>
 
       <section class="regla regla--alterna" id="r2" aria-labelledby="titulo-r2">
-        <h2 id="titulo-r2">Regla R2</h2>
-
+        <h2 id="titulo-r2">Regla R2 · Revisión de etiquetas problemáticas</h2>
         <div class="regla__resumen">
           <article class="sentencia">
-            <h3>Sentencia</h3>
+            <h3>Sentencia original</h3>
             <blockquote>
               <p>Si la etiqueta no se reconoce o corresponde a más de un registro, el sistema solicita revisión humana y no modifica el estado de ningún pedido.</p>
             </blockquote>
           </article>
-
           <article class="propuesta">
-            <h3>Propuesta de automatización</h3>
-            <div class="propuesta__contenido"></div>
+            <h3>Propuesta · Detección segura de inconsistencias</h3>
+            <div class="propuesta__contenido">
+              <p>Un futuro agente verificaría el código escaneado contra los registros y pediría intervención humana si no lo reconoce o encuentra más de una coincidencia. Así se hacen visibles los casos ambiguos sin alterar el estado de ningún pedido; una etiqueta con una sola coincidencia queda fuera de esta regla.</p>
+            </div>
           </article>
         </div>
+      </section>
 
-        <figure class="diagrama">
-          <img src="assets/diagrams/flujo-r2.svg" alt="Espacio reservado para el diagrama de flujo de R2." width="960" height="240">
-          <figcaption>Diagrama de flujo de R2</figcaption>
+      <section class="regla" id="flujos" aria-labelledby="titulo-flujos">
+        <h2 id="titulo-flujos">Diagramas</h2>
+        <figure class="diagrama diagrama--comparativo" tabindex="0">
+          <img src="assets/diagrams/flujo-comparativo.svg" alt="Comparación lado a lado de los flujos independientes R1 y R2. R1, en azul, comprueba si hay exactamente un pedido; R2, en verde, comprueba si la etiqueta no se reconoce o tiene más de un registro." width="1440" height="870">
+          <figcaption>R1 y R2 son recorridos independientes. R1 resalta la coincidencia única; R2, la condición “no reconocida o más de un registro”. Las alternativas que las sentencias no definen están señaladas como decisiones del grupo.</figcaption>
         </figure>
+      </section>
 
+      <section class="regla" id="detalle-r1" aria-labelledby="titulo-detalle-r1">
+        <h2 id="titulo-detalle-r1">Detalle de la propuesta R1</h2>
         <div class="desplegables">
-          <h3 class="desplegables__titulo">Detalle de la automatización</h3>
-
           <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-entrada" id="r2-boton-entrada">Datos de entrada</button>
-            </h4>
-            <div id="r2-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r2-boton-entrada" hidden></div>
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-entrada" id="r1-boton-entrada">Datos de entrada</button></h4>
+            <div id="r1-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r1-boton-entrada" hidden>
+              <p>Código obtenido al escanear la etiqueta y registros de pedidos que permitan identificar el pedido y su estado de preparación.</p>
+            </div>
           </div>
-
           <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-condiciones" id="r2-boton-condiciones">Condiciones</button>
-            </h4>
-            <div id="r2-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-condiciones" hidden></div>
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-condiciones" id="r1-boton-condiciones">Datos necesarios y condición</button></h4>
+            <div id="r1-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-condiciones" hidden>
+              <p>El agente consulta los pedidos registrados y cuenta las coincidencias de la etiqueta. La condición de la sentencia se cumple únicamente si hay exactamente un pedido asociado.</p>
+            </div>
           </div>
-
           <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-acciones" id="r2-boton-acciones">Acciones</button>
-            </h4>
-            <div id="r2-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-acciones" hidden></div>
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-acciones" id="r1-boton-acciones">Acciones y resultado esperado</button></h4>
+            <div id="r1-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r1-boton-acciones" hidden>
+              <p>Con una coincidencia, mostrar el pedido y el estado de preparación del paquete. Si hay cero o más de una coincidencia, R1 no define qué hacer; la propuesta del grupo es solicitar revisión humana y no cambiar estados.</p>
+            </div>
           </div>
-
           <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-herramientas" id="r2-boton-herramientas">Herramientas consultadas</button>
-            </h4>
-            <div id="r2-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r2-boton-herramientas" hidden></div>
-          </div>
-
-          <div class="desplegable">
-            <h4>
-              <button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-resultados" id="r2-boton-resultados">Resultados</button>
-            </h4>
-            <div id="r2-panel-resultados" class="desplegable__panel" role="region" aria-labelledby="r2-boton-resultados" hidden></div>
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r1-panel-herramientas" id="r1-boton-herramientas">Herramienta e intervención humana</button></h4>
+            <div id="r1-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r1-boton-herramientas" hidden>
+              <p>Se propone consultar la base de datos o registro de pedidos. La revisión humana sólo se agrega como alternativa de diseño cuando no hay exactamente una coincidencia; el agente no modifica datos.</p>
+            </div>
           </div>
         </div>
       </section>
+
+      <section class="regla" id="detalle-r2" aria-labelledby="titulo-detalle-r2">
+        <h2 id="titulo-detalle-r2">Detalle de la propuesta R2</h2>
+        <div class="desplegables">
+          <div class="desplegable">
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-entrada" id="r2-boton-entrada">Datos de entrada</button></h4>
+            <div id="r2-panel-entrada" class="desplegable__panel" role="region" aria-labelledby="r2-boton-entrada" hidden>
+              <p>Código de la etiqueta escaneada y registros disponibles para comprobar si existe y cuántas coincidencias tiene.</p>
+            </div>
+          </div>
+          <div class="desplegable">
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-condiciones" id="r2-boton-condiciones">Datos necesarios y condición</button></h4>
+            <div id="r2-panel-condiciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-condiciones" hidden>
+              <p>La regla usa una disyunción: se activa si la etiqueta no se reconoce O si corresponde a más de un registro. Basta con que se cumpla una de esas condiciones.</p>
+            </div>
+          </div>
+          <div class="desplegable">
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-acciones" id="r2-boton-acciones">Acciones y resultado esperado</button></h4>
+            <div id="r2-panel-acciones" class="desplegable__panel" role="region" aria-labelledby="r2-boton-acciones" hidden>
+              <p>Si la condición se cumple, solicitar revisión humana y no modificar el estado de ningún pedido. Si no se cumple, R2 no establece una acción; el grupo propone finalizar el recorrido sin accionar ni modificar estados.</p>
+            </div>
+          </div>
+          <div class="desplegable">
+            <h4><button type="button" class="desplegable__boton" aria-expanded="false" aria-controls="r2-panel-herramientas" id="r2-boton-herramientas">Herramienta e intervención humana</button></h4>
+            <div id="r2-panel-herramientas" class="desplegable__panel" role="region" aria-labelledby="r2-boton-herramientas" hidden>
+              <p>Se propone consultar el registro o base de datos de pedidos. Cuando no hay coincidencias o hay más de una, el agente solicita revisión humana y preserva los estados existentes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="identidad-grupo" id="grupo" aria-labelledby="titulo-grupo">
+        <div class="identidad-grupo__cabecera">
+          <img src="assets/images/logo-grupo-27.svg" alt="Logo propio del Grupo 27" width="104" height="104">
+          <div>
+            <h2 id="titulo-grupo">Grupo 27 · Soluciones agénticas</h2>
+          </div>
+        </div>
+        <p>Somos el equipo que diseña propuestas agénticas para simplificar procesos de logística y distribución. Para FlexControl desarrollamos dos soluciones: identificar pedidos por etiqueta y detectar casos que requieren revisión humana.</p>
+      </section>
     </main>
 
-    <footer class="pie" id="grupo">
-      <p>Trabajo realizado por el Grupo 27.</p>
-      <p>Bloque: Identificación del paquete.</p>
-      <p>IFTS 29.</p>
+    <footer class="pie">
+      <div class="pie__contenido">
+        <div class="pie__marca">
+          <p class="pie__sobretitulo">TP3 · FlexControl</p>
+          <p class="pie__titulo">Grupo 27</p>
+        </div>
+        <div class="pie__base">
+          <span>IFTS 29</span>
+          <span>Bloque: Identificación del paquete</span>
+        </div>
+      </div>
+      <a class="volver-arriba" href="#presentacion" aria-label="Volver arriba" hidden>
+        <span aria-hidden="true">↑</span>
+      </a>
     </footer>
 
     <script src="js/main.js"></script>
