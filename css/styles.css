@@ -1,3 +1,4 @@
+/* Variables globales de color, ancho de contenido y sombras. */
 :root {
   --azul-oscuro: #102b46;
   --azul: #1c5682;
@@ -50,6 +51,7 @@ a {
   outline-offset: 4px;
 }
 
+/* Barra superior, marca y enlaces de navegación. */
 .encabezado {
   position: sticky;
   z-index: 10;
@@ -126,6 +128,7 @@ a {
   background: rgba(255, 255, 255, 0.1);
 }
 
+/* Ancho máximo del contenido principal y estilos de identidad. */
 main {
   width: min(100% - 2.5rem, var(--ancho));
   margin: 0 auto;
@@ -155,6 +158,7 @@ main {
   box-shadow: 0 0.8rem 2rem rgba(16, 43, 70, 0.12);
 }
 
+/* Presentación inicial: logotipo, descripción y ficha del grupo. */
 .presentacion {
   padding: 2.5rem 0 1.75rem;
 }
@@ -271,6 +275,7 @@ h1 {
   font-weight: 650;
 }
 
+/* Tarjetas de reglas y comparación entre sentencia y propuesta. */
 .regla {
   padding: 2.25rem 0 2.5rem;
   scroll-margin-top: 6rem;
@@ -302,6 +307,7 @@ h1 {
 
 .sentencia,
 .propuesta,
+/* Imagen del diagrama y su texto descriptivo. */
 .diagrama {
   border: 1px solid var(--linea);
   border-radius: 1rem;
@@ -377,6 +383,7 @@ blockquote p {
   font-weight: 600;
 }
 
+/* Acordeones de información complementaria para cada regla. */
 .desplegables {
   display: grid;
   gap: 0.65rem;
@@ -461,6 +468,7 @@ blockquote p {
   margin: 0;
 }
 
+/* Bloque visual de identidad del equipo. */
 .identidad-grupo {
   margin: 2rem 0 2.5rem;
   padding: 1.75rem;
@@ -502,6 +510,7 @@ blockquote p {
   margin: 0.75rem 0 0;
 }
 
+/* Pie de página y botón flotante para volver al inicio. */
 .pie {
   position: relative;
   margin-top: 1rem;
@@ -595,6 +604,7 @@ blockquote p {
   transform: translateY(-4px);
 }
 
+/* Ajustes para pantallas medianas: reorganiza la ficha de presentación. */
 @media (max-width: 1000px) {
   .presentacion__grilla {
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -605,6 +615,7 @@ blockquote p {
   }
 }
 
+/* Diseño de una columna y navegación compacta en tabletas. */
 @media (max-width: 800px) {
   .presentacion__grilla,
   .regla__resumen {
@@ -664,6 +675,7 @@ blockquote p {
   }
 }
 
+/* Espaciados y controles adaptados a teléfonos pequeños. */
 @media (max-width: 480px) {
   main {
     width: min(100% - 1.25rem, var(--ancho));
@@ -699,6 +711,7 @@ blockquote p {
   }
 }
 
+/* Respeta la preferencia del usuario por reducir las animaciones. */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
