@@ -76,14 +76,12 @@ Los casos son ejemplos de recorrido; la página no consulta datos reales ni ejec
 | Aplicación / entorno | Modelo | Uso y cambios solicitados |
 |---|---|---|
 | Cursor | Modelo no informado | Asistencia en la estructura, el contenido y la revisión de la landing. |
-| Antigravity | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
-| Codex | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
-| OpenCode | Modelo no informado | Asistencia en el desarrollo y revisión del trabajo del TP3. |
-| VS Code con asistente de programación Copilot SDK | Modelo no informado | Completar el contenido pendiente de la landing, representar los dos recorridos con sus alternativas, poblar los detalles desplegables, diseñar la identidad gráfica opcional del Grupo 27 y alinear este README con la consigna. |
+| Codex | GPT-6 | Revisión del README. Cambios solicitados: documentar con comentarios el codigo, quitar Antigravity y OpenCode de la tabla, indicar el modelo de Copilot y registrar las mejoras propuestas para los flujos. |
+| VS Code con asistente de programación Copilot SDK | GPT-6.2 Astra | Asistencia para completar el contenido de la landing, representar los dos recorridos con sus alternativas, poblar los detalles desplegables, diseñar la identidad gráfica opcional del Grupo 27 y alinear el README con la consigna. |
 
-Los modelos se registran como **“modelo no informado”** porque no se dispone de sus nombres confirmados. El grupo indicó las aplicaciones anteriores; debe verificar el uso efectivo de cada una y agregar cualquier cambio solicitado que falte.
+Las aplicaciones con “modelo no informado” son aquellas cuyo modelo no pudo confirmarse.
 
 ## Enlaces
 
 - **Repositorio:** [RPalagano/TP3-FlexControl-Grupo27](https://github.com/RPalagano/TP3-FlexControl-Grupo27)
-- **Landing publicada:** pendiente de publicación; agregar aquí la URL final y comprobarla en una ventana sin sesión.
+- **Landing publicada:** [https://tp3-beta.vercel.app](https://tp3-beta.vercel.app)
