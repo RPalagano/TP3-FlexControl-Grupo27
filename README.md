@@ -84,4 +84,4 @@ Las aplicaciones con “modelo no informado” son aquellas cuyo modelo no pudo 
 ## Enlaces
 
 - **Repositorio:** [RPalagano/TP3-FlexControl-Grupo27](https://github.com/RPalagano/TP3-FlexControl-Grupo27)
-- **Landing publicada:** [https://tp3-beta.vercel.app](https://tp3-beta.vercel.app)
+- **Landing publicada:** [https://flexcontrol-grupo27.vercel.app](https://flexcontrol-grupo27.vercel.app)
