@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos del documento y recursos globales de estilos. -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlexControl | Grupo 27</title>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <!-- Encabezado fijo con identidad del sitio y navegación por secciones. -->
     <header class="encabezado">
       <a class="encabezado__marca" href="#presentacion">
         <img class="logo logo--chico" src="assets/images/icon_flexcontrol.webp" alt="" width="52" height="52">
@@ -25,7 +27,9 @@
       </nav>
     </header>
 
+    <!-- Contenido principal: presentación, reglas, diagramas y datos del grupo. -->
     <main>
+      <!-- Presentación de FlexControl, el servicio y el equipo académico. -->
       <section class="presentacion" id="presentacion" aria-labelledby="titulo-flexcontrol">
         <div class="presentacion__grilla">
           <img class="logo logo--grande" src="assets/images/icon_flexcontrol.webp" alt="Logo original de FlexControl" width="256" height="256">
@@ -48,6 +52,7 @@
         </div>
       </section>
 
+      <!-- R1: identifica y muestra un pedido cuando existe una única coincidencia. -->
       <section class="regla" id="r1" aria-labelledby="titulo-r1">
         <h2 id="titulo-r1">Regla R1 · Identificación de un pedido</h2>
         <div class="regla__resumen">
@@ -66,6 +71,7 @@
         </div>
       </section>
 
+      <!-- R2: deriva a revisión humana los códigos desconocidos o ambiguos. -->
       <section class="regla regla--alterna" id="r2" aria-labelledby="titulo-r2">
         <h2 id="titulo-r2">Regla R2 · Revisión de etiquetas problemáticas</h2>
         <div class="regla__resumen">
@@ -84,6 +90,7 @@
         </div>
       </section>
 
+      <!-- Diagrama visual que compara los recorridos independientes de R1 y R2. -->
       <section class="regla" id="flujos" aria-labelledby="titulo-flujos">
         <h2 id="titulo-flujos">Diagramas</h2>
         <figure class="diagrama diagrama--comparativo" tabindex="0">
@@ -92,6 +99,7 @@
         </figure>
       </section>
 
+      <!-- Acordeones con entradas, condiciones, acciones y herramientas de R1. -->
       <section class="regla" id="detalle-r1" aria-labelledby="titulo-detalle-r1">
         <h2 id="titulo-detalle-r1">Detalle de la propuesta R1</h2>
         <div class="desplegables">
@@ -122,6 +130,7 @@
         </div>
       </section>
 
+      <!-- Acordeones con entradas, condiciones, acciones y herramientas de R2. -->
       <section class="regla" id="detalle-r2" aria-labelledby="titulo-detalle-r2">
         <h2 id="titulo-detalle-r2">Detalle de la propuesta R2</h2>
         <div class="desplegables">
@@ -152,6 +161,7 @@
         </div>
       </section>
 
+      <!-- Identidad y descripción del equipo responsable de la propuesta. -->
       <section class="identidad-grupo" id="grupo" aria-labelledby="titulo-grupo">
         <div class="identidad-grupo__cabecera">
           <img src="assets/images/logo-grupo-27.svg" alt="Logo propio del Grupo 27" width="104" height="104">
@@ -163,6 +173,7 @@
       </section>
     </main>
 
+    <!-- Pie con datos del trabajo y acceso rápido a la presentación. -->
     <footer class="pie">
       <div class="pie__contenido">
         <div class="pie__marca">
@@ -179,6 +190,7 @@
       </a>
     </footer>
 
+    <!-- Comportamientos interactivos, como los paneles desplegables. -->
     <script src="js/main.js"></script>
   </body>
 </html>
